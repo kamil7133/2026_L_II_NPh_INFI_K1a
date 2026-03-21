@@ -4,14 +4,14 @@ from hello_world.formater import SUPPORTED, PLAIN
 from flask import request
 
 moje_imie = "Kamil"
-msg = "Hello World!"
+message = "Hello World!"
 
 @app.route('/')
 def index():
     output = request.args.get('output')
     if not output:
         output = PLAIN
-    return get_formatted(msg, moje_imie,
+    return get_formatted(message, moje_imie,
                          output.lower())
 
 @app.route('/outputs')
