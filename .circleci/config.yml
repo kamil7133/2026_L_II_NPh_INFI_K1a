@@ -16,6 +16,8 @@ jobs:
       - run: make deps
 
       - run: make test
+      
+      - run: make lint
 
 workflows:
 
